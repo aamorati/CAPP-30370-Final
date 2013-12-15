@@ -1,0 +1,104 @@
+/* General styles */
+
+html {background:silver;	background-image:url('http://humansvszombies.org/images/merch/bandana2k9.jpg'); background-repeat:repeat-y; background-size:5%;}
+
+@viewport {width:device-width; zoom:1;}
+
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+
+body {font-family: Verdana, Geneva, sans-serif;}
+
+.rulesmain, .photomain, .mainnavwhole {margin-right:5%; margin-left:5%;}
+	.indexmain {margin-right:15%; margin-left:5%}
+
+header h1 {margin-left:5%; text-shadow:0.1em 0.1em gray;}
+	
+footer {clear:both; background:gray; padding:1em;}
+
+/* Various styles */
+
+.inline {width:100%;}
+
+#stopButton {float:right;}
+
+/* Photo page layout (mobile only) */
+
+.photo {max-width:100%; margin:1em;}
+
+/* Dart animation */
+
+@-webkit-keyframes shoot {
+	100% {-webkit-transform:translate(0, 500px)}}
+.dart {position:absolute; right:10%;
+	-webkit-transition:all 1s ease-in;
+	-webkit-animation:shoot 1s ease-in infinite;}
+	
+.paused {
+	-ms-animation-play-state:paused;
+	-o-animation-play-state:paused;
+	-moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+	animation-play-state: paused;
+}
+
+/* Main navigation styling */
+
+.mainnav {text-align:center; clear:both; overflow:hidden;}
+	.mainnav ul {margin:0; padding:0; list-style:none; clear:both;}
+	.mainnav li {float:left;}
+	.mainnav a {display:block; padding:1em; border:2px solid orange; margin:.5em}
+
+.mainnav a:link {color:orange; background-color:white;}
+.mainnav a:visited {color:brown; background-color:white;}
+.mainnav a:focus {color:white; background-color:black;}
+.mainnav a:hover {color:white; background-color:black;}
+.mainnav a:active {color:brown; background-color:black;}
+
+/* Link styling */	
+
+a:link {color:orange;}
+a:visited {color:brown;}
+a:focus {color:white;}
+a:hover {color:white;}
+a:active {color:brown;}
+
+/* Rules page navigation styling */
+
+.rulesnavwhole {display:none; background-color:white; overflow:hidden; float:left; 
+	margin-left:10%; margin-top:5%;}
+.rulesnav {display:none; margin:1em;}
+	.rulesnav ul {margin:0; padding:0; list-style:none;}
+
+.rulesnav a:link {color:orange;}
+.rulesnav a:visited {color:brown;}
+.rulesnav a:focus {color:white; background-color:black;}
+.rulesnav a:hover {color:white; background-color:black;}
+.rulesnav a:active {color:brown;}
+
+/* Breakpoint styling */
+
+@media only screen and (min-width:700px) {
+	/* Rules page */
+	.rulesnavwhole {display:block;}
+	.rulesnav {display:block;}
+	.rulesmain {margin-left:30%;}
+	
+	/* Photos page */
+	.photomain {margin-right:5%; margin-left:5%;}
+	.photo {display:inline block; margin:1em; max-width:44%; clear:both;}
+}
+	
+@media only screen and (min-width:1000px) {
+	/* Rules page */
+	.rulesnavwhole {display:block;}
+	.rulesnav {display:block;}
+	.rulesmain {margin-right:15%; margin-left:30%}
+	.inline {float:right; max-width:50%; margin:1em;}
+	
+	/* Home page */
+	.indexmain {margin-right:30%; margin-left:15%}
+	
+	/* Photos page */
+	.photomain {margin-right:5%; margin-left:5%;}
+	.photo {display:inline block; margin:1em; max-width:29%; clear:both;}
+}
